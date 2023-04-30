@@ -17,7 +17,7 @@ public class Test{
 
     order3.addItem(item6);
     order3.addItem(item1);
-    order5.addItem(item5);
+    order3.addItem(item5);
     order5.addItem(item2);
     order4.addItem(item1);
     order4.addItem(item3);
