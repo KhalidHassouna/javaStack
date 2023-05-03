@@ -20,4 +20,17 @@ public class BurgerService {
 	public List<Burger> allBurgers() {
         return burgerRepository.findAll();
     }
+	public Burger findBurger(long id) {
+		   Optional<Burger> optionalBurger = burgerRepository.findById(id);
+	        if(optionalBurger.isPresent()) {
+	            return optionalBurger.get();
+	        } else {
+	            return null;
+	        }
+	 }  
+	public Burger updateBurger(Burger b) {
+        return burgerRepository.save(b);
+    }
+	
+	
 }

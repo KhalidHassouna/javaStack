@@ -11,43 +11,19 @@
 </head>
 <body>
 <div>
-<h1>All Burger</h1>
-<table>
-    <thead>
-        <tr>
-            
-            <th>Burger Name</th>
-            <th>Resturant Name</th>
-            <th>Rate</th>
-            <th>Action</th>
-            
-        </tr>
-    </thead>
-    <tbody>
-         <c:forEach var="br" items="${br}">
-          <tr>
-          
-          
-          <th><font ><c:out value="${br.burger_name}"/></font></th>
-          <th><font ><c:out value="${br.rest_name}"/></font></th>
-          <th><font ><c:out value="${br.rate}"/></font></th>
-          <th><font ><a href="/edit/${br.id }">Edit</a></font></th>
-          
-        
-   </c:forEach>
-    </tr>
-    </tbody>
-</table>
+
 </div>
-<h1>Add a Burger : </h1>
-<form:form action="/burger" method="post" modelAttribute="burger">
+<h1>Edit  Burger : </h1>
+  
+<form:form action="/edit/${br1.id}" method="post" modelAttribute="br1">
+    <input type="hidden" name="_method" value="put">
     <p>
         <form:label path="burger_name">burger_name</form:label>
         <form:errors path="burger_name"/>
         <form:input path="burger_name"/>
     </p>
     <p>
-        <form:label path="rest_name">restaurant_name</form:label>
+        <form:label path="rest_name">rest_name</form:label>
         <form:errors path="rest_name"/>
         <form:textarea path="rest_name"/>
     </p>
@@ -63,7 +39,6 @@
     </p>
       
     <input type="submit" value="Submit"/>
-</form:form>    
-
+</form:form> 
 </body>
 </html>
