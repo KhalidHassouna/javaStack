@@ -1,4 +1,6 @@
-package controller;
+package com.DaikichiPathVariables;
+
+
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

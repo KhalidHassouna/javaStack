@@ -1,15 +1,20 @@
-package com.khalid.controllers;
+package com.khalid;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
-
 @RestController
 @RequestMapping("/daikichi")
 
+public class Dacitchi {
 
-public class DaikichiController {
+
+
+
+
+
+
+
 	@RequestMapping("")
     public String greeting() {
             return "Welcome!";
@@ -25,3 +30,4 @@ public class DaikichiController {
 	
 
 }
+
